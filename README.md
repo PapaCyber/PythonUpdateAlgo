@@ -34,6 +34,8 @@ Here is a screenshot of the `.split()` function in action:
 
 <img src="https://imgur.com/L1RMRYD.png" height="100%" width="100%"/>
 
+As you can see, all the IP addresses are inside brackets `[]`, the ip_addresses are now in a list format.
+
 ## Iterate through the remove list
 
 I used the iterative statement `for` to loop over the list of approved `ip_ addresses` to remove restricted IP addresses from the loop variable named `element`,  in the `remove_list`. The `in` keyword indicates to iterate through the sequence of IP addresses within the `remove_list`.
