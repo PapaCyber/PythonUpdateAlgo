@@ -8,11 +8,11 @@ remove_list = ["192.168.97.225", "192.168.158.170", "192.168.201.40", "192.168.5
 
 # Build a 'with' statement to read the file.
 
-with open("import_file", "r") as file:
+with open(import_file, "r") as file:
 
 # Use the '.Read()' function to convert file to a string and store it in a variable named 'ip_addresses'
 
-ip_addresses = file.read()
+    ip_addresses = file.read()
 
 # Convert ip_addresses from a string into a list using the '.split()' function.
 
@@ -22,11 +22,11 @@ ip_addresses = ip_addresses.split()
 # Name loop variable 'element'
 # Loop through 'remove_list'
 
-for element in remove_list:
+for element in ip_addresses:
 
     # Create conditional state to evaluate if 'element' in 'ip_addresses'
 
-        if element in ip_addresses:
+        if element in remove_list:
 
                 # use the '.remove()' function to remove
                 # elements from 'ip_addresses'
@@ -39,8 +39,20 @@ ip_addresses = "\n".join(ip_addresses)
 
 # Build 'with' statement to rewrite the original file
 
-with open (import_file, "w") as file:
+with open(import_file, "w") as file:
 
     # Rewrite the file, replacing its contents with 'ip_addresses'
 
     file.write(ip_addresses)
+
+    # Build `with` statement to read in the updated file
+
+with open(import_file, "r") as file:
+
+    # Read in the updated file and store the contents in `text`
+
+    text = file.read()
+
+# Display the contents of `text`
+
+print(text)
