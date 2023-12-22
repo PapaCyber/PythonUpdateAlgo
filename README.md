@@ -44,7 +44,7 @@ Finally, the allow list file needs to be updated after removing restricted IP ad
 
 <img src="https://imgur.com/jkQoyQf.png" height="100%" width="100%"/>
 
-Since the file is now a string, I can open the file and use the  `.write()` function to replace the contents of `ip_addresses` which is the `allow_list.txt` file. I used the white space string “` `“ to instruct Python to put white space in between IP addresses.
+Since the file is now a string, I can open the file and use the  `.write()` function to replace the contents of `ip_addresses` which is the `allow_list.txt` file. I used the white space string `\n` to instruct Python to make a new line between IP addresses.
 
 <img src="https://imgur.com/2OuZ1SV.png" height="60%" width="60%"/>
 
